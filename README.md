@@ -55,6 +55,7 @@ git commit -a -m "Changed cpp file"
 git push -u origin master
 ```
 9) Проверьте, что история коммитов доступна в удалёный репозитории.
+10) 
 ![image](https://user-images.githubusercontent.com/91633974/160619526-683cca93-7ca1-4eed-a6b8-35328601269d.png)
 
 # PART_2
@@ -63,6 +64,7 @@ git push -u origin master
 git checkout -b patch
 ```
 ![image](https://user-images.githubusercontent.com/91633974/160619905-601283f4-ea39-4aa2-8503-0e38bbf35e2b.png)
+
 2) Внесите изменения в ветке patch1 по исправлению кода и избавления от using namespace std;
 ```
 #include <iostream>
@@ -76,6 +78,7 @@ int main(int argc, char** argv){
 EOF
 ```
 ![image](https://user-images.githubusercontent.com/91633974/160619999-4680bc26-bdd8-4118-93f1-43e513d0f44d.png)
+
 3) commit, push локальную ветку в удалённый репозиторий.
 ```
 git commit -a -m "Twice fixed cpp file"
@@ -101,6 +104,7 @@ git commit -a -m "Added comments"
 git push -u origin master 
 ```
 ![image](https://user-images.githubusercontent.com/91633974/160622372-bf716c4c-8e8b-45b4-85bb-1df5773d918a.png)
+
 8) Проверьте, что новые изменения есть в созданном на шаге 5 pull-request
 9) В удалённый репозитории выполните слияние PR patch1 -> master и удалите ветку patch1 в удаленном репозитории
 10) Локально выполните pull
@@ -116,6 +120,7 @@ git log
 ![image](https://user-images.githubusercontent.com/91633974/160623143-48073fb4-4ec7-429a-8ec9-c596fac72f18.png)
 ![image](https://user-images.githubusercontent.com/91633974/160623182-133df125-d382-4eff-beb3-db947bf0d226.png)
 ![image](https://user-images.githubusercontent.com/91633974/160623275-978891ba-4824-410c-ab35-6c7f8286cbcf.png)
+
 12) Удалите локальную ветку patch1
 ```
 git branch -d patch1
@@ -153,11 +158,13 @@ git add "Hello world.cpp"
 git rebase --continue
 ```
 ![image](https://user-images.githubusercontent.com/91633974/160625928-a0be190c-c113-4899-b5e1-eacb7d5b7a58.png)
+
 7) Сделайте force push в ветку patch2
 ```
 git push -f origin patch2
 ```
 ![image](https://user-images.githubusercontent.com/91633974/160627091-2638fc00-b271-43b3-9270-c426285ca2c0.png)
+
 8) Убедитель, что в pull-request пропали конфликтны
 9) Вмержите pull-request patch2 -> master
 ![image](https://user-images.githubusercontent.com/91633974/160626885-455db0e3-6afd-4247-b3a5-c95c1d8026a7.png)
